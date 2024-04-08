@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pumo Portal</title>
+  </head>
+  <body>
+    <style>
+      
+      @font-face {
+        font-family: __myFont_46eae6;
+        src: url(./8e45230ac9a6917d-s.p.ttf) format("truetype");
+        font-display: swap;
+      }
+
+      
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 0 solid #e5e7eb;
+        font-family: Helvetica, sans-serif;
+        line-height: 1.5;
+        letter-spacing: 2px;
+      }
+
+      .secTitle{
+        font-family: __myFont_46eae6, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:#fff;
+        font-size: 40px;
+      }
+
+      .container {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .heroContainer {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        position: relative;
+        background-image: url(./bg.jpg)
+        
+      }
+
+      .heroOverlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000a;
+      }
+
+      .title {
+        font-size: 58px;
+        color: #fff;
+        margin: 40px 0;
+        /* letter-spacing: 2px; */
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        40%,
+        100% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .b_holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        z-index: 1;
+      }
+
+      .b{
+        outline-offset: 0px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: none;
+        object-fit: fill;
+        background-color: #0a0a0a;
+        border-radius: 20px;
+        outline: 3px #fff;
+        flex: 0 auto;
+        width: 150px;
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 9px 15px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .b:hover{
+        background-color: #0e0e0e;
+      }
+
+      .marquee{
+        background-color: #0a0a0a;
+        color:#fff;
+        padding: 14px ;
+        font-size: 30px;
+      }
+
+      .nomicsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 40px);
+        max-width:500px;
+        padding: 20px;
+        padding-bottom: 40px;
+        background-color: #0a0a0a;
+        border-radius: 20px;
+        height: auto;
+        margin: 40px 20px;
+      }
+
+      .nomics{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .nomics_list{
+        color: white;
+      }
+
+      .nomics_list td{
+        text-align: right;
+        padding: 10px 0;
+      }
+
+      .nomics_list td:nth-child(even){
+        text-align: left;
+      }
+
+
+      .nomicsContainer .wallet{
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: grey;
+        color:#fff;
+        font-size: 14px;
+        letter-spacing: normal;
+        font-weight: bold;
+      }
+
+      .footContainer {
+        display: flex;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #0a0a0a;
+        border-radius: 0 0 30px 30px;
+        
+      }
+
+      .footWrite{
+        display: flex;
+        width: 100%;
+        max-width: 600px;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        color:#fff;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .copy{
+        display: flex;
+        width: 300px;
+        align-items: center;
+        padding: 30px 0;
+        color:#333;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        .b_holder {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .b{
+          width: 180px;
+        }
+
+        .nomicsContainer .wallet{
+          padding: 10px 10px;
+          font-size: 12px;
+        }
+
+      }
+    </style>
+    <div class="container">
+      <div class="heroContainer">
+        <div class="heroOverlay"></div>
+        <img
+          id="logo"
+          alt="image"
+          src="./logo.png"
+          loading="lazy"
+          decoding="async"
+          data-nimg="1"
+          style="color: transparent; z-index: 1;"
+          height="300"
+        />
+
+        <div class="b_holder">
+          <button class="b">
+            Telegram
+          </button>
+
+          <button class="b">
+            Buy
+          </button>
+
+          <button class="b">
+            Follow Us
+          </button>
+        </div>
+      </div>
+    </div>
+    <marquee class="marquee">EVERY DAMN DAY &nbsp;&nbsp;&nbsp; JUST HODL IT. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;EVERY DAMN DAY &nbsp;&nbsp;&nbsp; JUST HODL IT.</marquee>
+    <div class="container">
+      <div class="nomicsContainer">
+        <p class="secTitle">TOKENOMICS</p>
+        <table class="nomics">
+          <tr class="nomics_list">
+            <td>Supply &nbsp; </td><td> &nbsp; 1,000,000,000</td>
+          </tr>
+          <tr class="nomics_list">
+            <td>Network &nbsp; </td><td> &nbsp; Solana</td>
+          </tr>
+          <tr class="nomics_list">
+            <td>Ticker &nbsp; </td><td> &nbsp; $WOOSH</td>
+          </tr>
+          <tr class="nomics_list">
+            <td>No Taxes &nbsp; </td><td> &nbsp; $WOOSH</td>
+          </tr>
+          <tr class="nomics_list">
+            <td>No Team Tokens &nbsp; </td><td> &nbsp; $WOOSH</td>
+          </tr>
+          <tr class="nomics_list">
+            <td>Contract Renounced &nbsp; </td><td> &nbsp; $WOOSH</td>
+          </tr>
+          <tr class="nomics_list">
+            <td>Liquidity Burnt &nbsp; </td><td> &nbsp; $WOOSH</td>
+          </tr>
+        </table>
+        <div class="wallet">
+          29377Uz8eu6CeXmnMXJJge3gdaycyCbrubnLiUva75AA
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footContainer">
+        <div class="footWrite">
+          <p class="secTitle">Today</p>
+          <p>
+            Today, Noike stands before you at its infancy, poised to embark on a transformative path toward meaningful impact and lasting change in the world of cryptocurrency and beyond.
+
+            With the foundation laid and our principles guiding us forward, we eagerly anticipate the journey ahead, knowing that the best is yet to come.
+          </p>
+        </div>
+        <div class="socials">
+          <a href="https://twitter.com/soggscoin" target="_blank"
+            ><img src="./twitter.png" height="50"
+          /></a>
+          <a href="https://t.me/soggscoin" target="_blank"
+            ><img src="./telegram.png" height="50"
+          /></a>
+        </div>
+
+        <img
+          id="logo"
+          alt="image"
+          src="./logo.png"
+          loading="lazy"
+          decoding="async"
+          data-nimg="1"
+          style="color: transparent; z-index: 1;"
+          height="130"
+        />
+      </div>
+      <div class="copy">
+        $WOOSH is a memecoin intended for entertainment purposes only. Please invest responsibly, as prices may fluctuate, and we hold no liability for financial outcomes. Enjoy our project as a parody with caution.
+      </div>
+    </div>
+    
+  </body>
+</html>
